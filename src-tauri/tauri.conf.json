@@ -80,7 +80,11 @@
       "category": "DeveloperTool",
       "copyright": "",
       "deb": {
-        "depends": []
+        "depends": [],
+        "files": {
+          "/usr/share/README.md": "../README.md",
+          "usr/share/assets": "../assets/"
+        }
       },
       "externalBin": [],
       "icon": [
@@ -103,6 +107,10 @@
       "shortDescription": "",
       "targets": "all",
       "windows": {
+        "webviewInstallMode": {
+          "type": "offlineInstaller"
+        
+        },
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
         "timestampUrl": ""
