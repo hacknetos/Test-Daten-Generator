@@ -261,15 +261,15 @@
 							<option value="Text">Text</option>
 							<option value="Enum">Enum</option>
 							<option value="Date">Date</option>
-							<option value="Floute">Floute</option>
+							<option value="Floute">float</option>
 						</select></td
 					>
 					<td
 						>{#if row.Type == 'Status'}
 							<select class="valuesin" bind:value={row.options}>
 								<option value="Online">Online</option>
-								<option value="verfückbarkeit">verfückbarkeit</option>
-								<option value="support">support</option>
+								<option value="verfückbarkeit">Verfügbarkeit</option>
+								<option value="support">Support</option>
 							</select>
 						{:else if row.Type == 'Enum'}
 							<input
