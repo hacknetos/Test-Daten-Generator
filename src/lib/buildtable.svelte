@@ -266,15 +266,25 @@
 					>
 					<td
 						>{#if row.Type == 'Status'}
-							<select bind:value={row.options}>
+							<select class="valuesin" bind:value={row.options}>
 								<option value="Online">Online</option>
 								<option value="verfückbarkeit">verfückbarkeit</option>
 								<option value="support">support</option>
 							</select>
 						{:else if row.Type == 'Enum'}
-							<input type="text" bind:value={row.options} placeholder="Online,Offline,Abwesend" />
+							<input
+								class="valuesin"
+								type="text"
+								bind:value={row.options}
+								placeholder="Online,Offline,Abwesend"
+							/>
 						{:else}
-
+							<input
+								class="valuesin"
+								disabled
+								placeholder="Must Enum or Status"
+								value="Must Enum or Status"
+							/>
 						{/if}</td
 					>
 				</tr>
@@ -299,6 +309,16 @@
 	tr {
 		display: flex;
 		justify-content: space-evenly;
+	}
+	td {
+		text-align: center;
+	}
+	.valuesin {
+		width: 10rem;
+		margin: 0px;
+	}
+	select.valuesin {
+		width: 10.5rem;
 	}
 	.Save {
 		display: flex;
